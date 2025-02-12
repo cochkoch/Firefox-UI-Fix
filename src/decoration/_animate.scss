@@ -37,7 +37,6 @@
     &:not([collapsed]) {
       /* -moz-box-flex may be caused #tabbrowser-tabs[closebuttons] */
       transition: -moz-box-flex 0.2s var(--animation-easing-function),
-        flex 0.2s var(--animation-easing-function),
         margin-inline-start 0.2s var(--animation-easing-function), min-width 0.1s ease-out, max-width 0.1s ease-out !important;
     }
     &[pinned] {
@@ -115,7 +114,7 @@ xul|search-textbox.tabsFilter,
     will-change: margin-inline-start, opacity, visibility;
 
     &[hidden="true"] {
-      @include Box(true);
+      display: -moz-box !important;
       margin-inline-start: -18em;
       opacity: 0;
       visibility: collapse;
@@ -156,7 +155,8 @@ xul|search-textbox.tabsFilter,
 }
 
 /*- Expand - Synced Tabs ---------------------------------------------------*/
-@include moz-document(url "chrome://browser/content/syncedtabs/sidebar.xhtml") {
+@-moz-document url("chrome://browser/content/syncedtabs/sidebar.xhtml")
+{
   .item-tabs-list {
     transition: transform 0.2s ease-out, opacity 0.2s ease-out;
     transform: translateY(0%);
@@ -177,7 +177,8 @@ xul|search-textbox.tabsFilter,
 }
 
 /*- Arrow - Synced Tabs ----------------------------------------------------*/
-@include moz-document(url "chrome://browser/content/syncedtabs/sidebar.xhtml") {
+@-moz-document url("chrome://browser/content/syncedtabs/sidebar.xhtml")
+{
   /* treechildren::-moz-tree-twisty: Can't apply */
   #template-container .item.client {
     .item-twisty-container {

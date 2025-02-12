@@ -21,7 +21,7 @@
 }
 
 #nav-bar-customization-target {
-  @include BoxPack("justify");
+  -moz-box-pack: justify;
 }
 #nav-bar {
   // --toolbarbutton-outer-padding: 0px !important;

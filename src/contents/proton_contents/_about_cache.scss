@@ -1,4 +1,4 @@
-@include moz-document(url-prefix "about:cache") {
+@-moz-document url-prefix("about:cache") {
   table {
     padding: 0 !important;
   }

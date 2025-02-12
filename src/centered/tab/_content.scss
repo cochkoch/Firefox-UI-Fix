@@ -1,4 +1,4 @@
 .tab-icon-stack {
-  @include BoxFlex(1);
+  -moz-box-flex: 1;
   justify-content: end;
 }

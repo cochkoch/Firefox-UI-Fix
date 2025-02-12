@@ -1,4 +1,4 @@
-@include moz-document(url-prefix "about:checkerboard") {
+@-moz-document url-prefix("about:checkerboard") {
   #canvas {
     border: 1px solid var(--in-content-border-color) !important;
   }

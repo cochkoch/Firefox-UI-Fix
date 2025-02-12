@@ -1,5 +1,6 @@
 /*= Delete Cert ==============================================================*/
-@include moz-document(url "chrome://pippki/content/deletecert.xhtml") {
+@-moz-document url("chrome://pippki/content/deletecert.xhtml")
+{
   #certlist {
     border: 1px solid var(--in-content-table-border-color) !important;
     border-radius: 4px !important;
@@ -7,7 +8,8 @@
 }
 
 /*= Cert Exception Dialog ====================================================*/
-@include moz-document(url "chrome://pippki/content/exceptionDialog.xhtml") {
+@-moz-document url("chrome://pippki/content/exceptionDialog.xhtml")
+{
   #locationTextBox {
     appearance: none !important;
     border: 1px solid var(--in-content-box-border-color) !important;

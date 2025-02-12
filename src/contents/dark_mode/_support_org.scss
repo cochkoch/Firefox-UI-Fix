@@ -1,5 +1,6 @@
 /*= Support.org ============================================================*/
-@include moz-document(url-prefix "https://support.mozilla.org") {
+@-moz-document url-prefix("https://support.mozilla.org")
+{
   /* Basic */
   :root {
     --color-blue-06: var(--in-content-link-color) !important;

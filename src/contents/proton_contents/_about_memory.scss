@@ -1,4 +1,4 @@
-@include moz-document(url-prefix "about:memory") {
+@-moz-document url-prefix("about:memory") {
   .opsRow,
   .section {
     background-color: var(--in-content-box-background) !important;

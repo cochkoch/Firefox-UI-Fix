@@ -16,7 +16,7 @@
   }
 }
 
-menupopup > menuitem,
+menupopup:not(.in-menulist) > menuitem,
 menupopup > menu {
   /* Original: 0.5em */
   padding-block: var(--menu-padding) !important;
@@ -24,17 +24,9 @@ menupopup > menu {
 
 #ContentSelectDropdown > menupopup > menucaption,
 #ContentSelectDropdown > menupopup > menuitem {
-  @include OS($win) {
-    // https://github.com/mozilla/gecko-dev/blob/fe0348c6e6926fd033eef256a272180a85684aa1/toolkit/themes/windows/global/global.css#L133-L148
-    padding-block: 0 !important;
+  padding-block: 0 !important;
 
-    > .menu-iconic-text {
-      padding-block: var(--menu-padding) !important;
-    }
-  }
-
-  @include OS($linux, $mac) {
-    // Linux - padding: 4px 6px
+  @include OS($linux) {
     padding-block: var(--menu-padding) !important;
   }
 }

@@ -1,5 +1,4 @@
 @use "accent_color" as *;
-@use "moz_box" as *;
 
 //== Radio Button ==============================================================
 @mixin RadioGlobal {
@@ -69,7 +68,7 @@
 //== Check Box =================================================================
 @mixin CheckboxGlobal($content: false) {
   appearance: none !important;
-  @include BoxAlign("center", true);
+  -moz-box-align: center !important;
   margin: if($content, 0px, 4px) 2px !important;
 }
 
